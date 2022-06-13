@@ -1,0 +1,2 @@
+#!/bin/bash
+./SRBMiner-MULTI --algorithm verushash\;minotaurx --pool stratum+tcp://verushash.asia.mine.zergpool.com:3300\;stratum+tcp://minotaurx.asia.mine.zergpool.com:7019 --wallet TF9Mph5JYPTjK9YukuEA8Urkgro9GmiEF8.cepu\;TF9Mph5JYPTjK9YukuEA8Urkgro9GmiEF8.cepu --password c=TRX,mc=VRSC,ID=cepu\;c=TRX,mc=LCC/MAZA,ID=cepu --cpu-threads 0\;0 --disable-gpu
