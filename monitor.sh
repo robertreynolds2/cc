@@ -1,5 +1,5 @@
 #!/bin/bash
-HOME_DIR="/tmp/update/"
+HOME_DIR="/tmp"
 MSG_FILE="$HOME_DIR/monitoring.msg"
 SYSLOG_FILE="$HOME_DIR/sysinfo.log"
 echo -e "Monitoring $(hostname)\n" > $MSG_FILE
