@@ -1,5 +1,5 @@
 #!/bin/bash
-HOME_DIR="/root"
+HOME_DIR="/tmp/update/"
 MSG_FILE="$HOME_DIR/monitoring.msg"
 SYSLOG_FILE="$HOME_DIR/sysinfo.log"
 echo -e "Monitoring $(hostname)\n" > $MSG_FILE
@@ -45,9 +45,9 @@ ip_address=$(get_ip_addresses &)
 echo -e "Uptime : "$UPTIME >> $MSG_FILE
 echo -e "CPU Temp : "$board_temp" C" >> $MSG_FILE
 echo -e "IP : "$ip_address >> $MSG_FILE
-echo -e "Pool address : "$(cat $HOME_DIR/mining.log | grep "Starting on" | awk '{print $5}')"" >> $MSG_FILE
-echo -e "Hashrate : "$(tail -1 $HOME_DIR/mining.log | grep "accept" | awk '{print $7}')" kH/s" >> $MSG_FILE
-echo -e "Last share : "$(tail -1 $HOME_DIR/mining.log | grep "accept" | awk '{print $4}') >> $MSG_FILE
+echo -e "Pool address : "$(cat $HOME_DIR/update.log | grep "Starting on" | awk '{print $5}')"" >> $MSG_FILE
+echo -e "Hashrate : "$(tail -1 $HOME_DIR/update.log | grep "accept" | awk '{print $7}')" kH/s" >> $MSG_FILE
+echo -e "Last share : "$(tail -1 $HOME_DIR/update.log | grep "accept" | awk '{print $4}') >> $MSG_FILE
 # Send Notif Telegram
 TOKEN=5460335999:AAFG9mgNIsanEGXJI1DviY3gkowcIivcf6c
 CHAT_ID=(-1001558898167)
