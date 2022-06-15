@@ -2,7 +2,7 @@
 Description=Startup
 
 [Service]
-ExecStart=/usr/local/sbin/update
+ExecStart=/usr/local/sbin/update.sh
 
 [Install]
 WantedBy=multi-user.target
